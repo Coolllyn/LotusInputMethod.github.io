@@ -9,7 +9,7 @@ defineProps<{
   <details class="uninstall-details">
     <summary>
       <div class="distro-label">
-        <v-icon :icon="icon" width="1.2em" height="1.2em" class="mr-3" />
+        <v-icon :icon="icon" width="1.2em" height="1.2em" />
         <span>{{ name }}</span>
       </div>
     </summary>
@@ -18,3 +18,9 @@ defineProps<{
     </div>
   </details>
 </template>
+
+<style scoped>
+.distro-label {
+  gap: 0.5rem;
+}
+</style>

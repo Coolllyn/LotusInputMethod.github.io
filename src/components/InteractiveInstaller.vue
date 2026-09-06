@@ -3,6 +3,7 @@ import { ref, computed } from 'vue';
 import { DocumentCopy } from '@element-plus/icons-vue';
 import { ElMessage } from 'element-plus';
 import CodeLines from './CodeLines.vue';
+import { useTheme } from '@/utils/theme';
 import {
   distros,
   methods,
@@ -25,6 +26,35 @@ const selectedShell = ref<string>(shells[0] || '');
 const selectedDe = ref<string>(deWms[0] || '');
 const selectedEnv = ref<string>(environments[0] || '');
 const selectedInit = ref<string>(initSystems[0] || 'systemd');
+
+const { currentTheme } = useTheme();
+
+const deIcons: Record<string, string> = {
+  GNOME: 'simple-icons:gnome',
+  'KDE Plasma': 'simple-icons:kde',
+  Xfce: 'simple-icons:xfce',
+  Cinnamon: 'simple-icons:cinnamon',
+  MATE: 'simple-icons:ubuntumate',
+  Pantheon: 'simple-icons:pantheon',
+  COSMIC: 'simple-icons:system76',
+  i3: 'simple-icons:i3',
+  Sway: 'simple-icons:sway',
+  Hyprland: 'simple-icons:hyprland',
+  Niri: 'simple-icons:niri',
+};
+
+const envBaseIcons: Record<string, string> = {
+  Wayland: 'simple-icons:wayland',
+};
+
+const deIcon = (de: string): string | undefined => deIcons[de];
+
+const envIcon = (env: string): string | undefined =>
+  env === 'X11'
+    ? currentTheme.value === 'latte'
+      ? 'vscode-icons:file-type-light-xorg'
+      : 'vscode-icons:file-type-xorg'
+    : envBaseIcons[env];
 
 const needsUserCreation = computed(() => {
   return (
@@ -238,6 +268,7 @@ const chromiumWaylandFlags = computed(() =>
           <div class="de-grid">
             <div v-for="de in deWms" :key="de" class="de-card" :class="{ active: selectedDe === de }" role="button"
               tabindex="0" :aria-pressed="selectedDe === de" @click="selectedDe = de" @keydown.enter="selectedDe = de">
+              <v-icon v-if="deIcon(de)" :icon="deIcon(de)" width="1.25em" height="1.25em" />
               <span>{{ de }}</span>
             </div>
           </div>
@@ -249,6 +280,7 @@ const chromiumWaylandFlags = computed(() =>
             <div v-for="e in environments" :key="e" class="option-card" :class="{ active: selectedEnv === e }"
               role="button" tabindex="0" :aria-pressed="selectedEnv === e" @click="selectedEnv = e"
               @keydown.enter="selectedEnv = e">
+              <v-icon v-if="envIcon(e)" :icon="envIcon(e)" width="1.1em" height="1.1em" />
               <span>{{ e }}</span>
             </div>
           </div>
@@ -601,7 +633,7 @@ const chromiumWaylandFlags = computed(() =>
 }
 
 .de-grid {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .option-grid {
@@ -651,7 +683,6 @@ const chromiumWaylandFlags = computed(() =>
   outline-offset: 2px;
 }
 
-/* Trạng thái Active - Chỉ đổi viền và chữ để không bị lóa mảng màu lớn */
 .distro-card.active,
 .de-card.active,
 .option-card.active {
@@ -663,6 +694,12 @@ const chromiumWaylandFlags = computed(() =>
 
 .distro-card svg {
   flex-shrink: 0;
+}
+
+.de-card svg,
+.option-card svg {
+  flex-shrink: 0;
+  margin-right: 6px;
 }
 
 .distro-card span,
