@@ -227,7 +227,7 @@ const chromiumWaylandFlags = computed(() =>
             <div v-for="d in distros" :key="d.name" class="distro-card" :class="{ active: selectedDistro === d.name }"
               role="button" tabindex="0" :aria-pressed="selectedDistro === d.name" @click="selectedDistro = d.name"
               @keydown.enter="selectedDistro = d.name">
-              <v-icon :name="d.icon" scale="1.5" />
+              <v-icon :icon="d.icon" width="1.3em" height="1.3em" />
               <span>{{ d.name }}</span>
             </div>
           </div>

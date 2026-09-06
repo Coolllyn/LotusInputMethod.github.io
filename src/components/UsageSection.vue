@@ -170,7 +170,8 @@ const modeColumns = [
 
               <a href="https://fcitx-im.org/wiki/QuickPhrase" target="_blank"
                 class="text-link text-sm inline-flex items-center">
-                Xem chi tiết tại Fcitx5 Wiki <v-icon name="hi-external-link" class="ml-1" scale="0.8" />
+                Xem chi tiết tại Fcitx5 Wiki <v-icon icon="heroicons:arrow-top-right-on-square" class="ml-1"
+                  width="0.8em" height="0.8em" />
               </a>
             </div>
           </el-tab-pane>

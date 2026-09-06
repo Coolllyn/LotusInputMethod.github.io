@@ -14,7 +14,7 @@
       <div class="footer-links">
         <h4>Liên kết</h4>
         <a href="https://github.com/LotusInputMethod/fcitx5-lotus" class="flex items-center gap-2">
-          <v-icon name="si-github" /> GitHub
+          <v-icon icon="simple-icons:github" /> GitHub
         </a>
         <a href="https://github.com/LotusInputMethod/fcitx5-lotus/releases">Releases</a>
         <a href="https://github.com/LotusInputMethod/fcitx5-lotus/issues/new?template=bug_report.yml">Báo lỗi

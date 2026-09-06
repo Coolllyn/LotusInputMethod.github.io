@@ -67,7 +67,7 @@ import FeatureCard from './FeatureCard.vue';
         </FeatureCard>
 
         <FeatureCard iconClass="color-sky" title="Chuẩn bài Linux">
-          <template #icon><v-icon name="si-linux" scale="1.5" /></template>
+          <template #icon><v-icon icon="simple-icons:linux" width="1.5em" height="1.5em" /></template>
           <p>
             Hoạt động ổn định trên X11/Wayland, tương thích ngược với Wine và
             hỗ trợ tối đa cho trình duyệt nhân Chromium.

@@ -51,7 +51,7 @@ const cleanupCode =
           </div>
 
           <div class="custom-card uninstall-card">
-            <UninstallItem icon="si-archlinux" name="Arch Linux">
+            <UninstallItem icon="simple-icons:archlinux" name="Arch Linux">
               <p class="instruction mb-3">
                 Bạn có thể dùng <code>pacman</code> (khuyên dùng),
                 <code>yay</code> hoặc <code>paru</code> để gỡ cài đặt (nhớ gỡ
@@ -64,23 +64,23 @@ const cleanupCode =
                 :closable="false" class="custom-alert-info mt-2" />
             </UninstallItem>
 
-            <UninstallItem icon="si-debian" name="Debian">
+            <UninstallItem icon="simple-icons:debian" name="Debian">
               <CodeBlock :code="aptRemove" />
             </UninstallItem>
 
-            <UninstallItem icon="si-ubuntu" name="Ubuntu">
+            <UninstallItem icon="simple-icons:ubuntu" name="Ubuntu">
               <CodeBlock :code="aptRemove" />
             </UninstallItem>
 
-            <UninstallItem icon="si-fedora" name="Fedora">
+            <UninstallItem icon="simple-icons:fedora" name="Fedora">
               <CodeBlock :code="dnfRemove" />
             </UninstallItem>
 
-            <UninstallItem icon="si-opensuse" name="openSUSE">
+            <UninstallItem icon="simple-icons:opensuse" name="openSUSE">
               <CodeBlock :code="zypperRemove" />
             </UninstallItem>
 
-            <UninstallItem icon="co-linux" name="Void Linux">
+            <UninstallItem icon="simple-icons:voidlinux" name="Void Linux">
               <p class="instruction mb-2">Gỡ gói qua xbps:</p>
               <CodeBlock :code="voidXbpsRemove" />
               <p class="instruction mb-2 mt-3">
@@ -91,7 +91,7 @@ const cleanupCode =
               <CodeBlock :code="voidSvCleanup" />
             </UninstallItem>
 
-            <UninstallItem icon="si-nixos" name="NixOS">
+            <UninstallItem icon="simple-icons:nixos" name="NixOS">
               <p class="instruction mb-2">Gỡ tùy theo cách bạn đã cài:</p>
               <p class="instruction mb-2">
                 <b>Cách 1 — Cài từ nixpkgs (package manager):</b>
@@ -127,7 +127,7 @@ const cleanupCode =
               <p class="instruction mt-3">NixOS sẽ tự dọn dẹp.</p>
             </UninstallItem>
 
-            <UninstallItem icon="si-github" name="GitHub Releases">
+            <UninstallItem icon="simple-icons:github" name="GitHub Releases">
               <p class="instruction mb-3">
                 Gỡ cài đặt tùy theo distro bạn đang sử dụng:
               </p>
@@ -136,7 +136,7 @@ const cleanupCode =
               <CodeBlock :code="releasesOpenSUSE" />
             </UninstallItem>
 
-            <UninstallItem icon="si-linux" name="Source">
+            <UninstallItem icon="simple-icons:linux" name="Source">
               <p class="instruction mb-3">
                 Vào lại thư mục source code đã build và chạy:
               </p>

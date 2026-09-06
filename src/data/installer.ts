@@ -1,11 +1,11 @@
 export const distros = [
-  { name: 'Ubuntu', icon: 'si-ubuntu' },
-  { name: 'Debian', icon: 'si-debian' },
-  { name: 'Fedora', icon: 'si-fedora' },
-  { name: 'Arch Linux', icon: 'si-archlinux' },
-  { name: 'openSUSE', icon: 'si-opensuse' },
-  { name: 'NixOS', icon: 'si-nixos' },
-  { name: 'Void Linux', icon: 'co-linux' },
+  { name: 'Ubuntu', icon: 'simple-icons:ubuntu' },
+  { name: 'Debian', icon: 'simple-icons:debian' },
+  { name: 'Fedora', icon: 'simple-icons:fedora' },
+  { name: 'Arch Linux', icon: 'simple-icons:archlinux' },
+  { name: 'openSUSE', icon: 'simple-icons:opensuse' },
+  { name: 'NixOS', icon: 'simple-icons:nixos' },
+  { name: 'Void Linux', icon: 'simple-icons:voidlinux' },
 ];
 
 export type StepBlock =

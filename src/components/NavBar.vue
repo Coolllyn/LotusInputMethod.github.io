@@ -54,7 +54,7 @@ onUnmounted(() => {
         </el-button>
 
         <el-button type="primary" round class="btn-github" @click="goToGitHub">
-          <v-icon name="si-github" class="mr-2" /> GitHub
+          <v-icon icon="simple-icons:github" class="mr-2" /> GitHub
         </el-button>
       </div>
 
@@ -81,7 +81,7 @@ onUnmounted(() => {
         <a href="#uninstall" @click="mobileMenuOpen = false">Gỡ cài đặt</a>
         <a href="#contributors" @click="mobileMenuOpen = false">Đóng góp</a>
         <el-button type="primary" @click="goToGitHub">
-          <v-icon name="si-github" class="mr-2" /> GitHub
+          <v-icon icon="simple-icons:github" class="mr-2" /> GitHub
         </el-button>
       </div>
     </Transition>

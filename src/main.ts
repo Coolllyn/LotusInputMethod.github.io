@@ -2,38 +2,10 @@ import { createApp } from 'vue';
 import router from './router';
 import App from './App.vue';
 import './assets/shared.css';
-import { OhVueIcon, addIcons } from 'oh-vue-icons';
-import {
-  SiGithub,
-  SiLinux,
-  SiDebian,
-  SiUbuntu,
-  SiArchlinux,
-  SiFedora,
-  SiOpensuse,
-  SiNixos,
-  CoLinux,
-  HiStar,
-  HiUsers,
-  HiTag,
-} from 'oh-vue-icons/icons';
 
-addIcons(
-  SiGithub,
-  SiLinux,
-  SiDebian,
-  SiUbuntu,
-  SiArchlinux,
-  SiFedora,
-  SiOpensuse,
-  SiNixos,
-  CoLinux,
-  HiStar,
-  HiUsers,
-  HiTag,
-);
+import { Icon } from '@iconify/vue';
 
 const app = createApp(App);
-app.component('v-icon', OhVueIcon);
+app.component('v-icon', Icon);
 app.use(router);
 app.mount('#app');

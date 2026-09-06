@@ -70,35 +70,35 @@ onUnmounted(() => {
             </el-icon> Cài đặt ngay
           </el-button>
           <el-button size="large" class="btn-source" @click="goToGitHub">
-            <v-icon name="si-github" class="mr-2" scale="1.1" /> Xem trên
+            <v-icon icon="simple-icons:github" class="mr-2" width="1.1em" height="1.1em" /> Xem trên
             GitHub
           </el-button>
         </div>
         <div class="hero-stats">
           <div class="stat-item">
             <strong>
-              <v-icon name="hi-star" scale="1.8" class="align-bottom mr-1" />
+              <v-icon icon="heroicons:star" width="1.2em" height="1.2em" class="align-bottom mr-1" />
               {{ starCount }}
             </strong>
             <span>Stars</span>
           </div>
           <div class="stat-item">
             <strong>
-              <v-icon name="si-linux" scale="1.8" class="align-bottom mr-1" />
+              <v-icon icon="simple-icons:linux" width="1.2em" height="1.2em" class="align-bottom mr-1" />
               6+
             </strong>
             <span>Distros hỗ trợ</span>
           </div>
           <div class="stat-item">
             <strong>
-              <v-icon name="hi-users" scale="1.8" class="align-bottom mr-1" />
+              <v-icon icon="heroicons:users" width="1.2em" height="1.2em" class="align-bottom mr-1" />
               {{ contributorCount }}
             </strong>
             <span>Người đóng góp</span>
           </div>
           <div class="stat-item">
             <strong>
-              <v-icon name="hi-tag" scale="1.8" class="align-bottom mr-1" />
+              <v-icon icon="heroicons:tag" width="1.2em" height="1.2em" class="align-bottom mr-1" />
               <a v-if="latestVersion" :href="latestReleaseUrl" target="_blank" class="release-link">
                 {{ latestVersion }}
               </a>

@@ -6,7 +6,7 @@ Trang landing của Fcitx5 Lotus — bộ gõ tiếng Việt cho Linux. SPA Vue 
 
 - Vue 3 (Composition API, `<script setup lang="ts">`)
 - Vite 7, TypeScript, vue-router 4
-- Element Plus (auto-import), oh-vue-icons (`<v-icon>`), Bun
+- Element Plus (auto-import), iconify (`<v-icon>`), Bun
 
 ## Lệnh
 
@@ -28,7 +28,7 @@ Quan trọng: khi chỉ kiểm tra code, chạy `bun run lint` + `bun run type-c
 
 ## Quy ước
 
-- Mọi text UI bằng tiếng Việt; import alias `@/`; icon qua `el-icon` hoặc `<v-icon name="...">`.
+- Mọi text UI bằng tiếng Việt; import alias `@/`; icon qua `el-icon` hoặc `<v-icon icon="...">`.
 - State dùng chung giữa section → composable singleton (useTheme/useGitHubStats); không props/emit giữa section.
 - CSS: riêng 1 section → `<style scoped>`; class dùng chung hoặc render bởi component con → `shared.css` (scoped của cha không áp dụng vào con). Override Element Plus dùng `:root .el-*` cho đủ specificity. Không tự thêm CSS mới cho class không có rule (`.flex`, `.mb-0`...).
 - Không sửa tay `components.d.ts` / `auto-imports.d.ts` (generated).
