@@ -6,6 +6,7 @@ export const distros = [
   { name: 'openSUSE', icon: 'simple-icons:opensuse' },
   { name: 'NixOS', icon: 'simple-icons:nixos' },
   { name: 'Void Linux', icon: 'simple-icons:voidlinux' },
+  { name: 'Gentoo', icon: 'simple-icons:gentoo' },
 ];
 
 export type StepBlock =
@@ -161,6 +162,46 @@ export const logic = {
           'Void Linux không cung cấp gói Binary riêng, gói được cài qua xbps. Khuyến khích dùng phương thức Package Manager hoặc build from source (phương thức Source).',
         Source:
           'sudo xbps-install -S fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-qt acl acl-progs cmake extra-cmake-modules libfcitx5-devel libinput-devel eudev-libudev-devel gcc go gettext-devel pkg-config hicolor-icon-theme libX11-devel python3-QtPy python3-PyQt5 python3-pyqt6 python3-pyqt6-gui python3-pyqt6-widgets librsvg\n\ngit clone https://github.com/LotusInputMethod/fcitx5-lotus.git\ncd fcitx5-lotus\ngit submodule update --init --recursive\nmkdir build && cd build\ncmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_LIBDIR=/usr/lib -DINSTALL_RUNIT=ON -DRUNIT_SV_DIR=/etc/sv ..\nmake\nsudo make install',
+      },
+      Gentoo: {
+        'Package Manager': [
+          {
+            type: 'text',
+            content:
+              'Gói fcitx5-lotus hiện có sẵn trên overlay chính thức GURU của Gentoo.',
+          },
+          {
+            type: 'text',
+            content: '1. Kích hoạt và đồng bộ overlay GURU:',
+          },
+          {
+            type: 'code',
+            content:
+              'sudo eselect repository enable guru\nsudo emaint sync -r guru',
+          },
+          {
+            type: 'text',
+            content:
+              '2. Mở khóa testing keyword (~amd64) nếu đang chạy profile stable:',
+          },
+          {
+            type: 'code',
+            content:
+              'echo "app-i18n/fcitx5-lotus ~amd64" | sudo tee -a /etc/portage/package.accept_keywords/fcitx5-lotus\necho "acct-user/uinput-proxy ~amd64" | sudo tee -a /etc/portage/package.accept_keywords/fcitx5-lotus',
+          },
+          {
+            type: 'text',
+            content: '3. Cài đặt gói:',
+          },
+          {
+            type: 'code',
+            content: 'sudo emerge --ask app-i18n/fcitx5-lotus',
+          },
+        ],
+        Binary:
+          'Gentoo là bản phân phối source-based, khuyến khích cài đặt qua Package Manager (GURU overlay).',
+        Source:
+          'git clone https://github.com/LotusInputMethod/fcitx5-lotus.git\ncd fcitx5-lotus\ngit submodule update --init --recursive\nmkdir build && cd build\ncmake -DCMAKE_INSTALL_PREFIX=/usr ..\nmake\nsudo make install',
       },
     },
     autostart: {
