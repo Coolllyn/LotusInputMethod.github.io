@@ -988,3 +988,57 @@ code,
 .typing {
   font-feature-settings: 'calt', 'liga', 'zero';
 }
+
+:root .el-alert {
+  border-radius: 8px;
+  border: 1px solid transparent;
+}
+
+:root .el-alert__title {
+  color: var(--ctp-text) !important;
+  font-weight: 600;
+}
+
+:root .el-alert__description {
+  color: var(--ctp-subtext1) !important;
+}
+
+:root .el-alert__close-btn {
+  color: var(--ctp-subtext0) !important;
+}
+
+:root .el-alert--info {
+  background-color: color-mix(in srgb, var(--ctp-blue) 13%, var(--ctp-base)) !important;
+  border-color: color-mix(in srgb, var(--ctp-blue) 26%, transparent) !important;
+}
+
+:root .el-alert--info .el-alert__icon {
+  color: var(--ctp-blue) !important;
+}
+
+:root .el-alert--success {
+  background-color: color-mix(in srgb, var(--ctp-green) 13%, var(--ctp-base)) !important;
+  border-color: color-mix(in srgb, var(--ctp-green) 26%, transparent) !important;
+}
+
+:root .el-alert--success .el-alert__icon {
+  color: var(--ctp-green) !important;
+}
+
+:root .el-alert--warning {
+  background-color: color-mix(in srgb, var(--ctp-yellow) 13%, var(--ctp-base)) !important;
+  border-color: color-mix(in srgb, var(--ctp-yellow) 30%, transparent) !important;
+}
+
+:root .el-alert--warning .el-alert__icon {
+  color: var(--ctp-yellow) !important;
+}
+
+:root .el-alert--error {
+  background-color: color-mix(in srgb, var(--ctp-red) 13%, var(--ctp-base)) !important;
+  border-color: color-mix(in srgb, var(--ctp-red) 26%, transparent) !important;
+}
+
+:root .el-alert--error .el-alert__icon {
+  color: var(--ctp-red) !important;
+}
