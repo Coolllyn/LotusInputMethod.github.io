@@ -146,7 +146,16 @@ export const logic = {
           {
             type: 'code',
             content:
-              'curl -fsSL "https://codeberg.org/oSoWoSo/oco/raw/branch/OCO/keys/oco-repo-key.plist" -o /tmp/oco-repo-key.plist 2>/dev/null || curl -fsSL "https://raw.githubusercontent.com/oSoWoSo/Void_Community_Repository/OCO/keys/oco-repo-key.plist" -o /tmp/oco-repo-key.plist\nsudo cp /tmp/oco-repo-key.plist /var/db/xbps/keys/oco-repo-key.plist\necho repository=https://repo.osowoso.org/x86_64 | sudo tee /etc/xbps.d/00-VUR.conf\nsudo xbps-install -S\nsudo xbps-install -S fcitx5-lotus',
+              'echo repository=https://repo.osowoso.org/x86_64 | sudo tee /etc/xbps.d/00-VUR.conf\nsudo xbps-install -S',
+          },
+          {
+            type: 'text',
+            content:
+              'Lần đầu đồng bộ sau khi thêm kho, xbps sẽ hỏi import khoá RSA "oSoWoSo <mail@osowoso.org>" (Do you want to import this public key? [Y/n]) — gõ y. Không cần tải khoá thủ công bằng curl nữa.',
+          },
+          {
+            type: 'code',
+            content: 'sudo xbps-install -S fcitx5-lotus',
           },
           {
             type: 'text',

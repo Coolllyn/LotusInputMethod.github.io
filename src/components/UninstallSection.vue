@@ -90,6 +90,10 @@ const cleanupCode =
                 xbps không tự xoá — tắt và dọn thủ công:
               </p>
               <CodeBlock :code="voidSvCleanup" />
+              <p class="instruction mb-2 mt-3">
+                Nếu không còn dùng kho VUR nữa, xoá cấu hình kho:
+              </p>
+              <CodeBlock :code="'sudo rm /etc/xbps.d/00-VUR.conf'" />
             </UninstallItem>
 
             <UninstallItem icon="simple-icons:nixos" name="NixOS">
