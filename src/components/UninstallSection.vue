@@ -130,13 +130,9 @@ const cleanupCode =
             <UninstallItem icon="simple-icons:gentoo" name="Gentoo">
               <p class="instruction mb-2">Gỡ gói qua Portage:</p>
               <CodeBlock :code="gentooRemove" />
-              <el-alert
-              title="Lưu ý"
-              type="warning"
-              description="Luôn kiểm tra kỹ danh sách gói trước khi xác nhận [Yes] khi chạy --depclean để tránh gỡ nhầm các gói đang sử dụng."
-             :closable="false"
-                class="mt-2"
-                />
+              <el-alert title="Lưu ý" type="warning"
+                description="Luôn kiểm tra kỹ danh sách gói trước khi xác nhận [Yes] khi chạy --depclean để tránh gỡ nhầm các gói đang sử dụng."
+                :closable="false" class="mt-2" />
             </UninstallItem>
             <UninstallItem icon="simple-icons:github" name="GitHub Releases">
               <p class="instruction mb-3">
