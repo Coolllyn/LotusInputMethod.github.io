@@ -20,7 +20,8 @@ const voidXbpsRemove =
 
 const voidSvCleanup =
   'sudo rm -f /var/service/fcitx5-lotus.*\nsudo rm -rf /etc/sv/fcitx5-lotus.*';
-
+const gentooRemove =
+  'sudo emerge --deselect app-i18n/fcitx5-lotus\nsudo emerge --ask --depclean';
 const releasesDebian = '# Debian / Ubuntu\nsudo apt remove fcitx5-lotus';
 const releasesFedora = '# Fedora\nsudo dnf remove fcitx5-lotus';
 const releasesOpenSUSE = '# openSUSE\nsudo zypper remove fcitx5-lotus';
@@ -126,7 +127,17 @@ const cleanupCode =
               </ul>
               <p class="instruction mt-3">NixOS sẽ tự dọn dẹp.</p>
             </UninstallItem>
-
+            <UninstallItem icon="simple-icons:gentoo" name="Gentoo">
+              <p class="instruction mb-2">Gỡ gói qua Portage:</p>
+              <CodeBlock :code="gentooRemove" />
+              <el-alert
+              title="Lưu ý"
+              type="warning"
+              description="Luôn kiểm tra kỹ danh sách gói trước khi xác nhận [Yes] khi chạy --depclean để tránh gỡ nhầm các gói đang sử dụng."
+             :closable="false"
+                class="mt-2"
+                />
+            </UninstallItem>
             <UninstallItem icon="simple-icons:github" name="GitHub Releases">
               <p class="instruction mb-3">
                 Gỡ cài đặt tùy theo distro bạn đang sử dụng:
