@@ -146,7 +146,7 @@ export const logic = {
           {
             type: 'code',
             content:
-              'echo repository=https://repo.osowoso.org/x86_64 | sudo tee /etc/xbps.d/00-VUR.conf\nsudo xbps-install -S',
+              'echo repository=https://repo.osowoso.org/x86_64 | sudo tee /etc/xbps.d/10-VUR.conf\nsudo xbps-install -S',
           },
           {
             type: 'text',

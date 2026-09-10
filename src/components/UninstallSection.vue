@@ -93,7 +93,7 @@ const cleanupCode =
               <p class="instruction mb-2 mt-3">
                 Nếu không còn dùng kho VUR nữa, xoá cấu hình kho:
               </p>
-              <CodeBlock :code="'sudo rm /etc/xbps.d/00-VUR.conf'" />
+              <CodeBlock :code="'sudo rm /etc/xbps.d/10-VUR.conf'" />
             </UninstallItem>
 
             <UninstallItem icon="simple-icons:nixos" name="NixOS">
