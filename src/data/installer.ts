@@ -141,7 +141,7 @@ export const logic = {
           {
             type: 'text',
             content:
-              'Gói fcitx5-lotus hiện được cộng đồng đóng gói trong kho VUR. Hướng dẫn dành cho bản x86_64 glibc.',
+              'Gói fcitx5-lotus hiện được cộng đồng đóng gói trong kho VUR. Hướng dẫn dành cho bản x86_64 glibc vì các biến thể khác chưa hỗ trợ.',
           },
           {
             type: 'code',
