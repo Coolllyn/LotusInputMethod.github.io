@@ -166,6 +166,15 @@ export const logic = {
             type: 'code',
             content: 'sudo xbps-install -S fcitx5-lotus-settings',
           },
+          {
+            type: 'text',
+            content:
+              'Tuỳ chọn: nếu bạn đang dùng theme breeze, hãy cài thêm gói fcitx5-lotus-breeze.',
+          },
+          {
+            type: 'code',
+            content: 'sudo xbps-install -S fcitx5-lotus-breeze',
+          },
         ],
         Binary:
           'Void Linux không cung cấp gói Binary riêng, gói được cài qua xbps. Khuyến khích dùng phương thức Package Manager hoặc build from source (phương thức Source).',
