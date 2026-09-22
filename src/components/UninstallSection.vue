@@ -16,7 +16,7 @@ const zypperRemove =
   'sudo zypper remove fcitx5-lotus\nsudo zypper removerepo fcitx5-lotus';
 
 const voidXbpsRemove =
-  'sudo xbps-remove -R fcitx5-lotus fcitx5-lotus-settings fcitx5-lotus-breeze';
+  'sudo xbps-remove -R fcitx5-lotus fcitx5-lotus-settings';
 
 const voidSvCleanup =
   'sudo rm -f /var/service/fcitx5-lotus.*\nsudo rm -rf /etc/sv/fcitx5-lotus.*';
