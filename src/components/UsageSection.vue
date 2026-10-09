@@ -121,6 +121,40 @@ const modeColumns = [
                   description="Phím tắt menu chế độ gõ có thể thay đổi được trong phần cài đặt của Lotus để phù hợp với thói quen của bạn."
                   :closable="false" class="custom-alert-info" />
               </div>
+
+              <div class="text-sm instruction bg-mantle p-4 rounded-lg border mt-6">
+                <p class="mb-2">
+                  <strong>Tuỳ chỉnh độ trễ bộ gõ (thay cho mode Uinput (Slow) cũ):</strong>
+                  ba thông số điều chỉnh tốc độ gửi phím, đặt mặc định chung cho mọi
+                  ứng dụng trong
+                  <code class="inline-code">fcitx5-lotus-settings</code> →
+                  Applications.
+                </p>
+                <p class="mb-2">
+                  <strong>Commit Interval (mặc định 20ms):</strong> khoảng cách tối
+                  thiểu giữa 2 lần commit gần nhất khi gõ nhanh (ví dụ gõ dấu và mũ
+                  liên tiếp rất nhanh) để ứng dụng kịp xử lý. Máy khoẻ có thể hạ
+                  xuống 10ms.
+                </p>
+                <p class="mb-2">
+                  <strong>Backspace Interval (mặc định 5ms):</strong> khoảng cách
+                  giữa 2 lần xoá/lùi trong các chế độ Uinput. Đặt quá nhanh thì ứng
+                  dụng dễ không nhận kịp (một số trang trên Chromium cần 5ms).
+                </p>
+                <p class="mb-2">
+                  <strong>Post Delay (mặc định 10ms):</strong> thời gian chờ ứng
+                  dụng nhận dấu backspace cuối cùng trước khi commit — đây chính là
+                  khác biệt giữa mode Uinput (Smooth) 5ms và Uinput (Slow) 20ms
+                  trước đây. Muốn hành vi như Smooth cũ thì đặt 5ms.
+                </p>
+                <p class="m-0">
+                  <strong>Ghi đè theo từng ứng dụng:</strong> ngoài mặc định chung,
+                  mỗi ứng dụng có thể có bộ 3 thông số riêng (Applications → chọn
+                  ứng dụng, hoặc App Rules trong trình cấu hình). Giá trị
+                  <code class="inline-code">0</code> nghĩa là dùng mặc định chung —
+                  hữu ích cho các app xử lý phím chậm hoặc chập chờn như trình duyệt.
+                </p>
+              </div>
             </div>
           </el-tab-pane>
 

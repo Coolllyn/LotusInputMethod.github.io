@@ -13,7 +13,7 @@
       </div>
       <div class="footer-links">
         <h4>Liên kết</h4>
-        <a href="https://github.com/LotusInputMethod/fcitx5-lotus" class="flex items-center gap-2">
+        <a href="https://github.com/LotusInputMethod/fcitx5-lotus">
           <v-icon icon="simple-icons:github" /> GitHub
         </a>
         <a href="https://github.com/LotusInputMethod/fcitx5-lotus/releases">Releases</a>

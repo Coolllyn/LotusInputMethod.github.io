@@ -93,11 +93,6 @@ export const advancedSettings: AdvancedSettingInfo[] = [
   },
   {
     page: 'Typing',
-    option: 'Fix Uinput Mode With Ack',
-    feature: 'Sửa lỗi dính phím trên một số ứng dụng (như Chromium)',
-  },
-  {
-    page: 'Typing',
     option: 'Double Space to Period',
     feature: 'Nhấn dấu cách 2 lần để gõ dấu chấm (Thử nghiệm)',
   },
@@ -176,6 +171,24 @@ export const advancedSettings: AdvancedSettingInfo[] = [
     feature:
       'Xuất/nhập cấu hình JSON (Main Settings, Macros, Keymaps, App Rules, Dictionary)',
   },
+  {
+    page: 'Applications',
+    option: 'Default Commit Interval',
+    feature:
+      'Khoảng cách tối thiểu giữa 2 lần commit khi gõ nhanh, giúp ứng dụng kịp xử lý (mặc định 20ms)',
+  },
+  {
+    page: 'Applications',
+    option: 'Default Backspace Interval',
+    feature:
+      'Khoảng cách giữa 2 lần xoá/lùi trong các chế độ Uinput (mặc định 5ms)',
+  },
+  {
+    page: 'Applications',
+    option: 'Default Post Delay',
+    feature:
+      'Thời gian chờ ứng dụng nhận dấu backspace cuối cùng trước khi commit (mặc định 10ms)',
+  },
 ];
 
 export interface TypingMode {
@@ -195,11 +208,6 @@ export const typingModes: TypingMode[] = [
     shortcut: 'a',
     description:
       'Giống Uinput (Smooth) nhưng bỏ bước kiểm tra autofill — phản hồi nhanh nhất.',
-  },
-  {
-    mode: 'Uinput (Slow)',
-    shortcut: '2',
-    description: 'Tốc độ gửi phím chậm hơn, tăng khả năng tương thích.',
   },
   {
     mode: 'Uinput (Select)',
