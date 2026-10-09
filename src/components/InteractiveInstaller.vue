@@ -399,7 +399,7 @@ const chromiumWaylandFlags = computed(() =>
           <div class="step-content">
             <h4>Nạp Kernel Module uinput</h4>
             <p class="instruction">
-              Module uinput cần được nạp lần để fcitx5-lotus-server có thể tạo
+              Module uinput cần được nạp lần đầu để fcitx5-lotus-server có thể tạo
               thiết bị input ảo, lần sau khởi động sẽ tự động nạp.
             </p>
             <div class="code-container">
