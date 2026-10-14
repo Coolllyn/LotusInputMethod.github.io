@@ -48,7 +48,7 @@ export const logic = {
         },
         Binary: 'sudo dpkg -i fcitx5-lotus_*.deb',
         Source:
-          'sudo apt-get install acl cmake extra-cmake-modules libfcitx5core-dev libfcitx5config-dev libfcitx5utils-dev libinput-dev libudev-dev g++ golang hicolor-icon-theme pkg-config fcitx5-modules-dev python3 \ngit clone https://github.com/LotusInputMethod/fcitx5-lotus.git\ncd fcitx5-lotus\ncmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_LIBDIR=/usr/lib/x86_64-linux-gnu .\nmake\nsudo make install',
+          'sudo apt-get install acl cmake extra-cmake-modules libfcitx5core-dev libfcitx5config-dev libfcitx5utils-dev libinput-dev libudev-dev g++ hicolor-icon-theme pkg-config fcitx5-modules-dev python3 \ngit clone https://github.com/LotusInputMethod/fcitx5-lotus.git\ncd fcitx5-lotus\ncmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_LIBDIR=/usr/lib/x86_64-linux-gnu .\nmake\nsudo make install',
       },
       Ubuntu: {
         'Package Manager': {
@@ -57,7 +57,7 @@ export const logic = {
         },
         Binary: 'sudo dpkg -i fcitx5-lotus_*.deb',
         Source:
-          'sudo apt-get install acl cmake extra-cmake-modules libfcitx5core-dev libfcitx5config-dev libfcitx5utils-dev libinput-dev libudev-dev g++ golang hicolor-icon-theme pkg-config fcitx5-modules-dev python3\ngit clone https://github.com/LotusInputMethod/fcitx5-lotus.git\ncd fcitx5-lotus\ncmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_LIBDIR=/usr/lib/x86_64-linux-gnu .\nmake\nsudo make install',
+          'sudo apt-get install acl cmake extra-cmake-modules libfcitx5core-dev libfcitx5config-dev libfcitx5utils-dev libinput-dev libudev-dev g++ hicolor-icon-theme pkg-config fcitx5-modules-dev python3\ngit clone https://github.com/LotusInputMethod/fcitx5-lotus.git\ncd fcitx5-lotus\ncmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_LIBDIR=/usr/lib/x86_64-linux-gnu .\nmake\nsudo make install',
       },
       Fedora: {
         'Package Manager': {
@@ -66,14 +66,14 @@ export const logic = {
         },
         Binary: 'sudo rpm -i fcitx5-lotus-*.rpm',
         Source:
-          'sudo dnf install acl cmake extra-cmake-modules fcitx5-devel libinput-devel libudev-devel gcc-c++ golang hicolor-icon-theme systemd-devel python3\ngit clone https://github.com/LotusInputMethod/fcitx5-lotus.git\ncd fcitx5-lotus\ncmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_LIBDIR=/usr/lib64 .\nmake\nsudo make install',
+          'sudo dnf install acl cmake extra-cmake-modules fcitx5-devel libinput-devel libudev-devel gcc-c++ hicolor-icon-theme systemd-devel python3\ngit clone https://github.com/LotusInputMethod/fcitx5-lotus.git\ncd fcitx5-lotus\ncmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_LIBDIR=/usr/lib64 .\nmake\nsudo make install',
       },
       openSUSE: {
         'Package Manager':
           'sudo rpm --import https://fcitx5-lotus.pages.dev/pubkey.gpg\nsudo zypper addrepo https://fcitx5-lotus.pages.dev/rpm/opensuse/fcitx5-lotus-tumbleweed.repo\nsudo zypper refresh\nsudo zypper install fcitx5-lotus',
         Binary: 'sudo rpm -i fcitx5-lotus-*.rpm',
         Source:
-          'sudo zypper install cmake kf6-extra-cmake-modules fcitx5-devel libinput-devel systemd-devel gcc-c++ go hicolor-icon-theme systemd-devel python3-pyside6 python3-QtPy python3-dbus-python acl\ngit clone https://github.com/LotusInputMethod/fcitx5-lotus.git\ncd fcitx5-lotus\ncmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_LIBDIR=/usr/lib64 .\nmake\nsudo make install',
+          'sudo zypper install cmake kf6-extra-cmake-modules fcitx5-devel libinput-devel systemd-devel gcc-c++ hicolor-icon-theme systemd-devel python3-pyside6 python3-QtPy python3-dbus-python acl\ngit clone https://github.com/LotusInputMethod/fcitx5-lotus.git\ncd fcitx5-lotus\ncmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_LIBDIR=/usr/lib64 .\nmake\nsudo make install',
       },
       NixOS: {
         'Package Manager': [
@@ -141,7 +141,7 @@ export const logic = {
           {
             type: 'text',
             content:
-              'Gói fcitx5-lotus hiện được cộng đồng đóng gói trong kho VUR. Hướng dẫn dành cho bản x86_64 và aarch64 glibc (Chưa có bản musl do xung đột với CGo).',
+              'Gói fcitx5-lotus hiện được cộng đồng đóng gói trong kho VUR. Hướng dẫn dành cho bản x86_64 và aarch64 glibc.',
           },
           {
             type: 'text',
@@ -183,7 +183,7 @@ export const logic = {
         Binary:
           'Void Linux không cung cấp gói Binary riêng, gói được cài qua xbps. Khuyến khích dùng phương thức Package Manager hoặc build from source (phương thức Source).',
         Source:
-          'sudo xbps-install -S fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-qt acl acl-progs cmake extra-cmake-modules libfcitx5-devel libinput-devel eudev-libudev-devel gcc go gettext pkgconf hicolor-icon-theme python3-QtPy python3-pyqt6 python3-pyqt6-gui python3-pyqt6-widgets\n\ngit clone https://github.com/LotusInputMethod/fcitx5-lotus.git\ncd fcitx5-lotus\nmkdir build && cd build\ncmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_LIBDIR=/usr/lib -DINSTALL_RUNIT=ON -DRUNIT_SV_DIR=/etc/sv ..\nmake\nsudo make install',
+          'sudo xbps-install -S fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-qt acl acl-progs cmake extra-cmake-modules libfcitx5-devel libinput-devel eudev-libudev-devel gcc gettext pkgconf hicolor-icon-theme python3-QtPy python3-pyqt6 python3-pyqt6-gui python3-pyqt6-widgets\n\ngit clone https://github.com/LotusInputMethod/fcitx5-lotus.git\ncd fcitx5-lotus\nmkdir build && cd build\ncmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_LIBDIR=/usr/lib -DINSTALL_RUNIT=ON -DRUNIT_SV_DIR=/etc/sv ..\nmake\nsudo make install',
       },
       Gentoo: {
         'Package Manager': [
@@ -263,16 +263,6 @@ export const logic = {
           'Hỗ trợ text-input-v3 và zwp_input_method_v2 (từ bản 1.10+).',
         caveats:
           'Qt < 6.8.2 cần `QT_IM_MODULE=fcitx` do Sway chưa hỗ trợ text-input-v2. Lưu ý: Yêu cầu Sway 1.10 trở lên.',
-      },
-      Weston: {
-        best_setup: [
-          'Đặt `GTK_IM_MODULE=fcitx` và `QT_IM_MODULE=fcitx`.',
-          'Cấu hình `~/.config/weston.ini`:',
-          '[core]\nxwayland=true\n\n[input-method]\npath=/usr/bin/fcitx5',
-        ],
-        support_info: 'Sử dụng text-input-v1 và zwp_input_method_v1.',
-        caveats:
-          'Do thiếu text-input-v3, IM module là giải pháp duy nhất cho Gtk/Qt.',
       },
       Niri: {
         best_setup: [
